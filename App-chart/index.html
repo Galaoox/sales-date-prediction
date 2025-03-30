@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Gráfico de Barras Horizontal con D3</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+
+<body>
+    <div class="page">
+        <header class="page__header">
+            <h2 class="page__title">Gráfico de Barras Horizontal con D3</h2>
+        </header>
+        <main class="page__content">
+            <form class="form" id="data-form" action="javascript:void(0);">
+                <div class="form__group">
+                    <label class="form__label" for="data-input">Source Data (números enteros separados por
+                        coma):</label>
+                    <input class="form__input" type="text" id="data-input" value="4,8,15,16,20"
+                        placeholder="Ej: 4,8,15,16">
+                </div>
+                <div class="form__group">
+                    <button class="form__button" id="update-btn" type="button">Update Data</button>
+                </div>
+            </form>
+            <div id="chart" class="chart"></div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

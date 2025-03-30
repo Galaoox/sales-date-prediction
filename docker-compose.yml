@@ -1,0 +1,47 @@
+services:
+  salesdateprediction-backend:
+    build:
+      context: ./sales-date-prediction-backend
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+      - "443:443"
+    depends_on:
+      - db
+    networks:
+      - sales-network
+    env_file:
+      - ./sales-date-prediction-backend/.env
+
+  salesdateprediction-frontend:
+    build:
+      context: ./sales-date-prediction-frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80"
+    depends_on:
+      - salesdateprediction-backend
+    networks:
+      - sales-network
+
+  db:
+    build:
+      context: ./sales-date-prediction-backend
+      dockerfile: Dockerfile.sqlserver
+    environment:
+      SA_PASSWORD: "P@ssw0rd"
+      ACCEPT_EULA: "Y"
+    ports:
+      - "1433:1433"
+    restart: unless-stopped
+    networks:
+      - sales-network
+    volumes:
+      - sqlserver-data:/var/opt/mssql
+
+networks:
+  sales-network:
+    driver: bridge
+
+volumes:
+  sqlserver-data:

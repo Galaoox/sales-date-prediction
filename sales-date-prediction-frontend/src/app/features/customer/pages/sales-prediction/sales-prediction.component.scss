@@ -1,0 +1,15 @@
+.custom-toolbar {
+    background-color: black;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 1rem;
+
+    .content {
+        max-width: 1200px;
+        padding: 20px;
+        margin: 0 auto;
+        text-align: left;
+        width: 100%;
+    }
+}

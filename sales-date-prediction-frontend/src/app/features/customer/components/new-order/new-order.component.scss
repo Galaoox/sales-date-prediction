@@ -1,0 +1,78 @@
+$primary-color: #4CAF50;
+$border-color: #e0e0e0;
+$spacing: 16px;
+
+mat-dialog-container {
+    padding: 0 !important;
+}
+
+h1 {
+    background-color: $primary-color;
+    color: white !important;
+    padding: $spacing;
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.form-container {
+    padding: $spacing;
+}
+
+.section-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: $spacing / 2;
+    color: #333;
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.medium-field {
+    flex: 1;
+    min-width: 220px;
+}
+
+.large-field {
+    flex: 2;
+    min-width: 300px;
+}
+
+.small-field {
+    flex: 0.5;
+    min-width: 120px;
+}
+
+.divider {
+    margin: $spacing 0;
+    border-color: $border-color;
+}
+
+.button-group {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: $spacing;
+
+    button {
+        text-transform: uppercase;
+    }
+
+    .save-button {
+        background-color: $primary-color;
+        color: white;
+    }
+}
+
+.grid-row-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 6px;
+}

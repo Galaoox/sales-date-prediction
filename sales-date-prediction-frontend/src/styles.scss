@@ -1,0 +1,57 @@
+/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+
+// Customize the entire app. Change :root to your selector if you want to scope the styles.
+:root {
+    @include mat.form-field-overrides((filled-container-color: white));
+
+    & {
+        --color-red-rising: #d32f2f;
+        --color-green-hulk: green;
+    }
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+// Standar input number
+input[type="number"] {
+    -moz-appearance: textfield;
+    /* Firefox */
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    /* Chrome, Safari, Edge, Opera */
+}
+
+
+// Modal custom styles
+.custom-modalbox {
+    .mat-mdc-dialog-content {
+        max-height: none;
+    }
+}
+
+.dialog-content {
+    border-radius: 8px;
+}
+
+// Typography custom styles #TODO: improve this
+
+.font-color-red-rising {
+    color: var(--color-red-rising) !important;
+}
+
+.font-color-green-hulk {
+    color: var(--color-green-hulk) !important;
+}
